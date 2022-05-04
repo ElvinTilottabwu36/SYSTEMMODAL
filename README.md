@@ -1,0 +1,2 @@
+# SYSTEMMODAL
+#include &lt;Excel.au3> #include &lt;MsgBoxConstants.au3>   Local $oExcel = _Excel_Open() Local $oWorkbook = _Excel_BookNew($oExcel)   _Excel_RangeWrite($oWorkBook,Default,"=IF(D2=D1,"",VLOOKUP(D2,'J:\Temporary Files\FolderName\FileName.xlsx'!$A:$B,2,0))","W2",False)   If @error Then Exit MsgBox($MB_SYSTEMMODAL, "Excel UDF: _Excel_RangeWrite Example 1", "Error writing to worksheet." &amp; @CRLF &amp; "@error = " &amp; @error &amp; ", @extended = " &amp; @extended) MsgBox($MB_SYSTEMMODAL, "Excel UDF: _Excel_RangeWrite Example 1", "String successfully written.")
